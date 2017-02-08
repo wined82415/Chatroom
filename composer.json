@@ -1,0 +1,17 @@
+{
+    "name": "wined/chatroom",
+    "authors": [
+        {
+            "name": "Wined",
+            "email": "wined82415@gmail.com"
+        }
+    ],
+    "require": {
+        "cboden/ratchet": "^0.3.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Chatroom\\": "src/"
+        }
+    }
+}
