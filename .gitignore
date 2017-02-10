@@ -1,4 +1,11 @@
-.DS_Store
-composer.lock
-/vendor/*
-
+/node_modules
+/public/storage
+/public/hot
+/storage/*.key
+/vendor
+/.idea
+/.idea/*
+.idea/*
+Homestead.json
+Homestead.yaml
+.env

@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+Options +FollowSymlinks
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond $1 !^(index\.php|assets|uploads|apple-touch-icon\.png|crossdomain\.xml|favicon\.ico|robots\.txt)
+RewriteCond %{REQUEST_URI} !.*\.(ico|gif|jpg|jpeg|png|js|css)
+RewriteRule ^(.*)$ index.php/$1 [L,QSA]
+</IfModule>
