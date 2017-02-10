@@ -36,12 +36,14 @@
 
 <body>
 <div class="container">
+    
     <div class="log"></div>
 
     <div class="func">
         <textarea class="form-control msg" rows="3"></textarea>
         <input class="btn btn-success send" type="button" value="送出">
     </div>
+
 </div>
 
 </body>
