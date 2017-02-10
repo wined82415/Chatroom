@@ -22,7 +22,7 @@ class ChatServer extends Command
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Open a Chat server';
 
     /**
      * Create a new command instance.
@@ -41,7 +41,7 @@ class ChatServer extends Command
      */
     public function handle()
     {
-        $url = 'chatroom.dev';
+        $url = 'localhost';
         $port = 8080;
 
         $server = IoServer::factory(
