@@ -6,6 +6,7 @@
 /.idea
 /.idea/*
 .idea/*
+composer.lock
 Homestead.json
 Homestead.yaml
 .env
