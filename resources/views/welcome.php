@@ -8,8 +8,10 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
+    body {
+        max-width: 720px;
+    }
     .func{
-        /*position: absolute;*/
         top: 80%;
         width: 320px;
         display: inline-block;
@@ -19,7 +21,6 @@
         float: left;
         display: block;
         width: 70%;
-        /*width: 200%;*/
     }
 
     .func > input {
@@ -29,17 +30,28 @@
     }
 
     .log {
-        overflow-y: scroll
+        overflow-y: scroll;
+        border: 1px solid #ededed;
     }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="log"></div>
-        <div class="func">
-            <textarea class="form-control msg" rows="3"></textarea>
-            <input class="btn btn-success send" type="button" value="送出">
-        </div>
+        <form>
+            <div class="form-group">
+                <div class="log"></div>
+            </div>
+            <div class="form-group func">
+                <div class="row">
+                    <div class="col-xs-10">
+                        <textarea class="form-control msg" rows="3"></textarea>
+                    </div>
+                    <div class="col-xs-2">
+                        <input class="btn btn-success send" type="button" value="送出">
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
     <script>
         var conn = new WebSocket('ws://localhost:8080');
