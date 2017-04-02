@@ -5,41 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>聊天?</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Chatroom/public/css/chatroom.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style>
-    body {
-        max-width: 720px;
-    }
-    .func{
-        top: 80%;
-        width: 320px;
-        display: inline-block;
-    }
-
-    .func > textarea {
-        float: left;
-        display: block;
-        width: 70%;
-    }
-
-    .func > input {
-        float: left;
-        display: block;
-        height: 74px;
-    }
-
-    .log {
-        overflow-y: scroll;
-        border: 1px solid #ededed;
-    }
-    </style>
 </head>
 <body>
     <div class="container">
         <form>
-            <div class="form-group">
-                <div class="log"></div>
+            <div class="form-group log">
             </div>
             <div class="form-group func">
                 <div class="row">
@@ -60,9 +33,9 @@
         };
 
         conn.onmessage = function(e) {
-            var msgHtml = '<div class="well">';
+            var msgHtml = '<span class="well">';
 
-            $('.log').append(msgHtml + e.data + '</div>');
+            $('.log').append(msgHtml + e.data + '</span>');
         };
 
         $(function() {
